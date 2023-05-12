@@ -15,4 +15,13 @@ class MainController extends AbstractController
             'controller_name' => 'MainController',
         ]);
     }
+
+    #[Route('/getName/{id}', name: 'app_getName')]
+    public function getName(int $id): Response
+    {
+        $name = 'Имя не найдено';
+//      $rr =  $this->u getName($id);
+
+        return new Response( $name );
+    }
 }
